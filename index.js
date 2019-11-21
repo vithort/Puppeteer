@@ -3,17 +3,17 @@ const puppeteer = require('puppeteer')
 const tirarScreenshot = async () => {
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
-    await page.goto('https://devpleno.com')
-    //await page.screenshot({ path: 'devpleno.png' })
-    await page.pdf({
+    await page.goto('http://globo.com')
+    await page.screenshot({ path: 'devpleno.png' })
+    /*await page.pdf({
         path: 'devpleno.pdf'
         , format: 'A4'
-    })
+    })*/
     await page.close()
 }
 
-//tirarScreenshot()
-
+tirarScreenshot()
+/*
 const getInfo = async () => {
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
@@ -31,3 +31,4 @@ const getInfo = async () => {
 }
 
 getInfo()
+*/
